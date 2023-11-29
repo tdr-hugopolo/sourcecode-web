@@ -1,0 +1,168 @@
+
+.menu-row {
+    display: grid; 
+ 
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    
+    gap: 10px;
+    height: 100px;
+    
+ }
+   
+ #item-0 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin-left: 20px;
+    grid-row-end: 2;
+    grid-column-end: 2;
+    
+ }
+ #item-1 {
+ 
+    background-color: #e0e0e0; 
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-right: 20px;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    
+ }
+
+ .status-text-offline{
+    color: rgb(255, 0, 0);
+    background-color: #ffffff00;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 20px;
+ }
+ .status-text-online{
+    color: limegreen;
+    background-color: #ffffff00;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 20px;
+ }
+
+ .navbararea{
+    height: 150px;
+  }
+  
+  nav {
+    height: 70px;
+    z-index: 10000;
+    color: #fff;
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  nav ul {
+    margin: 0;
+    z-index: 10000;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li {
+    display: inline-block;
+    z-index: 10000;
+  }
+  
+  nav a {
+    display: block;
+    font-weight: bold;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 70px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+    nav b {
+      display: block;
+      font-weight: bold;
+      padding: 0 30px;
+      text-decoration: none;
+      background-color: #cc1620;
+      color: white;
+      font-size: 16px;
+      line-height: 70px;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    nav a:hover {
+      background-color: #e3e3e3;
+    }
+  
+    .items-left-navbar{
+      background-color: white; 
+      align-items: center; 
+      margin: 10px;
+      justify-content: center; 
+      display: flex;
+    }
+  
+  
+    .identifier-name {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .name {
+      font-family: 'Calibri';
+      margin-right: 5px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  
+    .year{
+      font-family: 'Calibri';
+   
+      color: #b8b4b4;
+      margin-right: 6px;
+    }
+    .user-type{
+      font-family: 'Calibri';
+      color: #605c5c;
+      margin-right: 6px;
+    }
+  
+    #da-icons{
+      display: flex; 
+      color:#ffffff; 
+      padding-top: 55px; 
+      padding-left: 260px;
+      font-size: 60px;
+    }
+  
+  .notification-square{
+    
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 310px;
+    margin-top: 65px; 
+  }
+  
+  .da-notifications{
+    font-size: 60px;
+    font-family: 'Calibri';
+    font-weight: bold;
+    color: #337ab7;
+  }
+  
