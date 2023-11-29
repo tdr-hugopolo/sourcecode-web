@@ -181,19 +181,20 @@
   .items-grid {
     display: grid; 
  
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.4fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 20px;
+    padding-top: 20px;
     margin-right: 20px;
-    gap: 20px;
-    height: 400px;
     width: auto;
+    gap: 20px;
+    height: 500px;
     
  }
    
  #item-0 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 1;
     grid-column-start: 1;
  
@@ -203,7 +204,7 @@
  }
  #item-1 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 1;
     grid-column-start: 2;
  
@@ -213,7 +214,7 @@
  }
  #item-2 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 1;
     grid-column-start: 3;
  
@@ -223,7 +224,7 @@
  }
  #item-3 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 1;
     grid-column-start: 4;
  
@@ -233,7 +234,7 @@
  }
  #item-4 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 2;
     grid-column-start: 4;
  
@@ -243,7 +244,7 @@
  }
  #item-5 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 2;
     grid-column-start: 3;
  
@@ -253,7 +254,7 @@
  }
  #item-6 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 2;
     grid-column-start: 2;
  
@@ -263,11 +264,47 @@
  }
  #item-7 {
  
-    background-color: #38cefb; 
+    background-color: rgb(56, 206, 251); 
     grid-row-start: 2;
     grid-column-start: 1;
  
     grid-row-end: 3;
     grid-column-end: 2;
     
+ }
+ #item-8 {
+ 
+    background-color: rgb(56, 160, 251); 
+    grid-row-start: 3;
+    grid-column-start: 3;
+ 
+    grid-row-end: 4;
+    grid-column-end: 5;
+    
+ }
+
+ #icons-style{
+    color: white;
+    margin-top: 10px;
+    font-size: 60px;
+ }
+
+ .summary-item-text{
+    color: white;
+    margin-top: 0px;
+    font-size: 40px;
+    font-family: 'Calibri';
+    margin-top: 15px;
+    position: absolute;
+ }
+
+ .summary-item-text-bold{
+    color: white;
+    font-weight: bold;
+    margin-left: 135px;
+    margin-top: 0px;
+    font-size: 40px;
+    font-family: 'Calibri';
+    margin-top: 15px;
+    position: absolute;
  }
