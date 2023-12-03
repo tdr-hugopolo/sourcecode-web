@@ -307,3 +307,7 @@
     margin-top: 15px;
     position: absolute;
  }
+
+ #summary-icons{
+  font-size: 60px; color: #ffffff; margin-top: 20px; margin-left: 20px;
+ }
