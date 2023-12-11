@@ -1,33 +1,35 @@
 <!DOCTYPE html>&nbsp;
+
+<meta charset="UTF-8">
 <link rel="stylesheet" href="./style.css">
 <html>
     <title>Configuració</title>
-    <head>
-            
+        <head>      
+    	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
             <div class="menu-row">
               <div id="navbar-space">&nbsp;
                 <nav style="background-color: rgba(111, 111, 111, 0); height: 70px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"> 
                     <ul>
-                        <li><a href="index.html" style="color: blue;" data-i18n="summary">Sumari</a></li>
-                        <li><a href="participantes.html" style="color: blue "data-i18n="participants">Comandaments</a></li>
-                        <li><a href="auditoria.html" style="color: blue;" data-i18n="auditory">Auditoria</a></li>
-                        <li><b href="config.html" style="color: white;" data-i18n="auditory">Configuració</b></li> 
-                        <li><a href="./login/index.html" style="margin-left: 550px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
-                   </ul>
-                   
+                        <li><a href="index.html"  style="color: blue" data-i18n="summary">Sumari</a></li>
+                        <li><a href="comandaments.html" style="color: blue " data-i18n="participants">Comandaments</a></li>
+                        <li><b href="config.html" data-i18n="auditory">Configuració</b></li>
+                        <li><a href="./login.html" style="margin-left: 650px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
+                      </ul>
                 </nav>
-                
               </div>
               <div id="status-space">&nbsp;
                 <img style="width: 120px; height: auto; margin-top: 6px;" src="./esp32.png">
-                <d1 class="status-text-online">CONNECTAT A ESP-32</d1>
+                <d1 class="status-text-online" style="color: white; background-color: red">ERROR CORS</d1>
+              </div>
  
             </div>
-            </div>
-            
-            
-
     </head>
+
+    <body>
+<div style="text-align: center; margin-top: 100px">
+    	<d1 style="font-family: 'Calibri'; font-size: 100px; font-weight: bold; text-align: center; color: red">NO HI HA CONFIGURACIONS DISPONIBLES</d1>
+    </div>
+    </body>
     
     
 </html>

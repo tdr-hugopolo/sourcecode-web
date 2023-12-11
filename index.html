@@ -1,25 +1,26 @@
 <!DOCTYPE html>&nbsp;
+<meta charset="UTF-8">
 <link rel="stylesheet" href="./style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <html>
     <title>Control domòtic</title>
     <head>      
+    	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
             <div class="menu-row">
               <div id="navbar-space">&nbsp;
                 <nav style="background-color: rgba(111, 111, 111, 0); height: 70px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"> 
                     <ul>
                         <li><b href="summary.html"  data-i18n="summary">Sumari</b></li>
                         <li><a href="comandaments.html" style="color: blue "data-i18n="participants">Comandaments</a></li>
-                        <li><a href="auditoria.html" style="color: blue;" data-i18n="auditory">Auditoria</a></li>
                         <li><a href="config.html" style="color: blue;" data-i18n="auditory">Configuració</a></li>
-                        <li><a href="./login/index.html" style="margin-left: 550px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
+                        <li><a href="./login.html" style="margin-left: 650px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
                       </ul>
                 </nav>
               </div>
               <div id="status-space">&nbsp;
                 <img style="width: 120px; height: auto; margin-top: 6px;" src="./esp32.png">
-                <d1 class="status-text-online">CONNECTAT A ESP-32</d1>
+                <d1 class="status-text-online" style="color: white; background-color: red">ERROR CORS</d1>
               </div>
  
             </div>
@@ -29,46 +30,101 @@
               <div id="item-0">&nbsp;
                 <i class="fa-regular fa-calendar" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">DATA</d1>
+                <d1 id="fecha" class="summary-item-text" style="margin-top: 90px; margin-left: 20px;">Loading</d1>
               </div>
               <div id="item-1">&nbsp;
                 <i class="fa-solid fa-clock" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">HORA</d1>
+                <d1 id="hora" class="summary-item-text" style="margin-top: 90px; margin-left: 20px;">Loading</d1>
               </div>
               <div id="item-2">&nbsp;
                 <i class="fa-solid fa-bell" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">ALARMA</d1>
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
               </div>
               <div id="item-3">&nbsp;
                 <i class="fa-solid fa-cubes" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">MODE</d1>
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
               </div>
               <div id="item-4">&nbsp;
                 <i class="fa-solid fa-temperature-low"id="summary-icons" ></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">TEMPERATURA</d1>
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
               </div>
               <div id="item-5">&nbsp;
                 <i class="fa-solid fa-sun" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">LLUMINOSITAT</d1>
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
               </div>
               <div id="item-6">&nbsp;
                 <i class="fa-solid fa-droplet" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">HUMITAT</d1>
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
 
               </div>
               <div id="item-7">&nbsp;
                 <i class="fa-solid fa-car" id="summary-icons"></i>
                 <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">GARATGE</d1>
-
+                <d1 class="summary-item-text" style="margin-top: 90px; background-color: red; margin-left: 20px;">ERROR CORS</d1>
               </div>
-              <div id="item-8">&nbsp;
+              <div onclick="location.href='./comandaments.html';" style="cursor: pointer;"id="item-8">&nbsp;
                 <i id="icons-style" class='bx bx-right-arrow-alt'></i>
                 <d1 class="summary-item-text">ANAR A </d1>
                 <d1 class="summary-item-text-bold">COMANDAMENTS</d1>
               </div>
             </div>
-            
-            
     </body>
     <script src="https://kit.fontawesome.com/51fcfaf073.js" crossorigin="anonymous"></script>
+  <script>
+    var fechaActual = new Date();
+    var dia = fechaActual.getDate();
+    var mes = fechaActual.getMonth() + 1;
+    var anio = fechaActual.getFullYear();
+    dia = dia < 10 ? '0' + dia : dia;
+    mes = mes < 10 ? '0' + mes : mes;
+    var fechaComoTexto = dia + '/' + mes + '/' + anio;
+    document.getElementById('fecha').innerText = fechaComoTexto;
+  </script>
+<script>
+    function actualizarHora() {
+    
+      var fechaActual = new Date();
+
+      
+      var horas = fechaActual.getHours();
+      var minutos = fechaActual.getMinutes();
+      var segundos = fechaActual.getSeconds();
+
+
+      horas = horas < 10 ? '0' + horas : horas;
+      minutos = minutos < 10 ? '0' + minutos : minutos;
+      segundos = segundos < 10 ? '0' + segundos : segundos;
+
+      
+      var horaComoTexto = horas + ':' + minutos + ':' + segundos;
+
+
+      document.getElementById('hora').innerText = horaComoTexto;
+    }
+
+
+    setInterval(actualizarHora, 1000);
+
+    actualizarHora();
+  </script>
+<script>
+        // Intent de fetch
+        fetch('http://localhost:3000/192.168.1.54:80/values')
+            .then(response => response.json())
+            .then(data => {
+            	console.log(data);
+                const humidityElement = document.getElementById('humidity');
+                humidityElement.textContent = data.humidity.toFixed(2); 
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos:', error);
+            });
+    </script>
 
 </html>

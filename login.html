@@ -52,37 +52,19 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button onclick="login();" class="login100-form-btn">
-							Entra
-						</button>
-					</div>
+        <div onclick="login();" style="cursor: pointer; border-radius: 10px; font-family: 'Calibri'; font-size: 20px; width: 80px; text-align:center; background-color: white; color: black;">Entra</div>
 
+					</div>
 					<div class="text-center p-t-90">
 					</div>
-				</form>
+				</form> 
 			</div>
 		</div>
 	</div>
 	
 
 	<div id="dropDownSelect1"></div>
-	
-<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+
 
 </body>
 </html>
@@ -109,9 +91,9 @@ function login(){
 	}
 	}
 
-	if(password=="dibtec2023" & username=="admin"){
+	if(password=="123" & username=="admin"){
 		wait(100);
-		window.location.href = "../index.html";
+		window.location.href = "./index.html";
 	} else {
 		alert("Credencials incorrectes");
 	}

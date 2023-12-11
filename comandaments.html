@@ -1,26 +1,102 @@
 <!DOCTYPE html>&nbsp;
 <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/51fcfaf073.js" crossorigin="anonymous"></script>
 <html>
     <title>Comandaments</title>
-    <head>      
+        <head>      
+    	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
             <div class="menu-row">
               <div id="navbar-space">&nbsp;
                 <nav style="background-color: rgba(111, 111, 111, 0); height: 70px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"> 
                     <ul>
-                        <li><a href="index.html" style="color: blue " data-i18n="summary">Sumari</a></li>
-                        <li><b href="participantes.html" style="color: white "data-i18n="participants">Comandaments</b></li>
-                        <li><a href="auditoria.html" style="color: blue;" data-i18n="auditory">Auditoria</a></li>
-                        <li><a href="config.html" style="color: blue;" data-i18n="auditory">Configuració</a></li>
-                        <li><a href="./login/index.html" style="margin-left: 550px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
+                        <li><a href="index.html"  style="color: blue" data-i18n="summary">Sumari</a></li>
+                        <li><b href="comandaments.html"  data-i18n="participants">Comandaments</b></li>
+                        <li><a href="config.html" style="color: blue " data-i18n="auditory">Configuració</a></li>
+                        <li><a href="./login.html" style="margin-left: 650px; background-color: rgb(237, 68, 85); color: white;" data-i18n="auditory">SORTIR</a></li>
                       </ul>
                 </nav>
               </div>
               <div id="status-space">&nbsp;
                 <img style="width: 120px; height: auto; margin-top: 6px;" src="./esp32.png">
-                <d1 class="status-text-online">CONNECTAT A ESP-32</d1>
+                <d1 class="status-text-online" style="color: white; background-color: red">ERROR CORS</d1>
               </div>
- 
             </div>
     </head>
+<body>
+ <body>
+            <div style="margin-top: 20px;" class="items-grid">
+              <div style="background-color: #ff7c73" id="item-0">&nbsp;
+                <i class="fa-solid fa-shield" id="summary-icons"></i>
+                <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">ALARMA</d1>
+
+                <div style="background-color: white; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 100px; ,margin-top: 20px; position: absolute; cursor: pointer;">ACTIVAR</div>
+                <div style="background-color: white; position: absolute; border-radius: 15px; text-align: center; width: 130px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 210px; ,margin-top: 20px; cursor: pointer;">DESACTIVAR</div>
+
+              </div>
+
+
+              <div style="background-color: #59d964" id="item-1">&nbsp;
+                <i class="fa-solid fa-house-chimney-window" id="summary-icons"></i>
+                <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">FINESTRES</d1>
+
+				<div style="background-color: white; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 100px; ,margin-top: 20px; position: absolute; cursor: pointer;">PUJAR</div>
+                <div style="background-color: white; position: absolute; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 210px; ,margin-top: 20px; cursor: pointer;">BAIXAR</div>
+
+              </div>
+
+
+
+              <div style="background-color: #d9a459" id="item-2">&nbsp;
+                <i class="fa-solid fa-warehouse" id="summary-icons"></i>
+                <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">PORTA GARATGE</d1>
+
+				<div style="background-color: white; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 120px; ,margin-top: 20px; position: absolute; cursor: pointer;">OBRIR</div>
+                <div style="background-color: white; position: absolute; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 230px; ,margin-top: 20px; cursor: pointer;">TANCAR</div>
+
+
+              </div>
+
+
+              <div style="background-color: #a788eb" id="item-3">&nbsp;
+                <i class="fa-solid fa-cubes" id="summary-icons"></i>
+                <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">MODE</d1>
+
+				<div style="background-color: white; border-radius: 15px; text-align: center; width: 130px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 120px; ,margin-top: 20px; position: absolute; cursor: pointer;">AUTOMÀTIC</div>
+                <div style="background-color: white; position: absolute; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 260px; ,margin-top: 20px; cursor: pointer;">MANUAL</div>
+
+
+
+              </div>
+
+                            <div style="background-color: #88c8eb" id="item-7">&nbsp;
+                <i class="fa-solid fa-lightbulb" id="summary-icons"></i>
+                <d1 class="summary-item-text" style="margin-top: 25px; margin-left: 20px; font-weight: bold;">ENLLUMENAT</d1>
+
+				<div style="background-color: white; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 100px; ,margin-top: 20px; position: absolute; cursor: pointer;">ENCÈS</div>
+                <div style="background-color: white; position: absolute; border-radius: 15px; text-align: center; width: 100px; height: 30px; font-size: 20px; font-family: 'Calibri'; margin-left: 210px; ,margin-top: 20px; cursor: pointer;">APAGAT</div>
+
+                <div>
+                <i class="fa-solid fa-circle" style="color: white; font-size: 20px; margin-top: 50px; margin-left: 120px; position: absolute;"></i>
+                <i class="fa-solid fa-circle" style="color: red; font-size: 20px; margin-top: 50px; margin-left: 160px; position: absolute;"></i>
+                <i class="fa-solid fa-circle" style="color: blue; font-size: 20px; margin-top: 50px; margin-left: 200px; position: absolute;"></i>
+                <i class="fa-solid fa-circle" style="color: green; font-size: 20px; margin-top: 50px; margin-left: 240px; position: absolute;"></i>
+                <i class="fa-solid fa-circle" style="color: yellow; font-size: 20px; margin-top: 50px; margin-left: 280px; position: absolute;"></i>
+
+            </div>
+
+
+
+              </div>
+</body>
+
+
+
+
+
+
+
+
+
     </html>
